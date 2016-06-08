@@ -5,7 +5,6 @@ var app            = express();
 var server         = require('http').Server(app);
 var fs             = require('fs');
 var request        = require('request');
-var config         = require('./config');
 
 // set up Express
 var pub = __dirname + '/public';
@@ -61,6 +60,6 @@ routes.runScript = function(req, res) {
 // set up the routes
 app.get('/run/:script', routes.runScript);
 
-server.listen(config.port || 4000, function() {
+server.listen(process.env.MIXPANEL_PORT || 4000, function() {
   console.log('Listening on port %d', server.address().port);
 });
