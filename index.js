@@ -43,7 +43,7 @@ routes.runScript = function(req, res) {
           script: data
         },
         auth: {
-          username: config.mixpanelSecret,
+          username: process.env.MIXPANEL_SECRET,
           password: '',
           sendImmediately: false
         }
