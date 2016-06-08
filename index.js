@@ -61,6 +61,6 @@ routes.runScript = function(req, res) {
 // set up the routes
 app.get('/run/:script', routes.runScript);
 
-server.listen(4333, function() {
+server.listen(config.port || 4000, function() {
   console.log('Listening on port %d', server.address().port);
 });

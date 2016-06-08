@@ -1,3 +1,4 @@
 {
-  "mixpanelSecret": "<secret>"
+  "mixpanelSecret": "<secret>",
+  "port": 4000
 }
